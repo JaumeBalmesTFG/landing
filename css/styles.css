@@ -1,0 +1,144 @@
+* {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.start {
+    background-color: rgba(22, 112, 172, 0.87);
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0;
+    height: 20px !important;
+    letter-spacing: 2px;
+}
+
+#header {
+    color: white !important;
+    padding: 10px 0;
+}
+
+.header-container {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    height: 55px;
+    margin: auto;
+    width: 1250px;
+}
+
+#logo h3 {
+    font-size: 45px;
+    color: transparent;
+    color: #ff9f1c;
+    color: white;
+    font-weight: bolder;
+}
+
+#nav ul li {
+    display: inline-block;
+    padding-left: 25px;
+    font-weight: bold;
+}
+
+#nav ul li:hover {
+    transition: .2s color;
+    color: rgb(63, 61, 61);
+    cursor: pointer;
+}
+
+.banner {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    width: 1250px;
+}
+
+.banner {
+    color: rgb(63, 61, 61);
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.badges {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.badges img {
+    width: 200px;
+}
+
+#app img{
+    width: 300px;
+}
+
+/* Transition */
+
+.presentation {
+    background: linear-gradient(280deg, #2ec4b6, #ff9f1c);
+    background-size: 600% 600%;
+    height: 700px;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 60%
+    }
+
+    50% {
+        background-position: 100% 41%
+    }
+
+    100% {
+        background-position: 0% 60%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 60%
+    }
+
+    50% {
+        background-position: 100% 41%
+    }
+
+    100% {
+        background-position: 0% 60%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 60%
+    }
+
+    50% {
+        background-position: 100% 41%
+    }
+
+    100% {
+        background-position: 0% 60%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 60%
+    }
+
+    50% {
+        background-position: 100% 41%
+    }
+
+    100% {
+        background-position: 0% 60%
+    }
+}
