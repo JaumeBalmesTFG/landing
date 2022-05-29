@@ -1,10 +1,17 @@
-* {
-    font-family: 'Open Sans', sans-serif !important;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;          /* Firefox */
-    image-rendering: -o-crisp-edges;            /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
-    -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100% !important;
 }
 
 .start {
@@ -15,6 +22,16 @@
     padding: 10px 0;
     height: 20px !important;
     letter-spacing: 2px;
+}
+
+#launch-body {
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 #header {
@@ -46,7 +63,7 @@
     font-weight: bold;
 }
 
-#nav ul li:hover {
+a:hover {
     transition: .2s color;
     color: rgb(63, 61, 61);
     cursor: pointer;
@@ -63,41 +80,58 @@
 
 .banner {
     color: rgb(63, 61, 61);
+    margin-top: 60px;
+}
+
+.banner h3 {
     font-size: 80px;
     font-weight: bold;
-    margin-top: 60px;
+}
+
+.banner p {
+    margin: 25px 0;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+.banner>div {
+    margin: 0 50px;
 }
 
 .badges {
-    margin-top: 15px;
+    margin-top: 25px;
     text-align: left;
 }
 
-.badges img{
+.badges img {
     width: 220px;
 }
 
-#app img{
-    width: 300px;
+#app img {
+    width: 250px;
+    -webkit-filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.5));
 }
 
-.title-step{
-    color: rgb(63, 61, 61);
-    font-size: 80px;
-    font-weight: bold;
-    margin-top: 60px;
+#launch {
+    background-color: white;
     width: 1250px;
+    margin: 125px auto;
     text-align: center;
-    margin: 30px auto;
+    font-size: 35px;
+    border-radius: 10px;
+    padding: 25px;
+    font-weight: bold;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-/* chart */
 /* Transition */
 
-.presentation {
+body {
     background: linear-gradient(280deg, #2ec4b6, #ff9f1c);
     background-size: 600% 600%;
-    height: 800px;
+    height: 100%;
     -webkit-animation: AnimationName 10s ease infinite;
     -moz-animation: AnimationName 10s ease infinite;
     -o-animation: AnimationName 10s ease infinite;
@@ -157,5 +191,195 @@
 
     100% {
         background-position: 0% 60%
+    }
+}
+
+/* on entry effect */
+* {
+    animation-duration: 0.2s;
+    animation-name: animate-fade;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.icon-container {
+    display: flex;
+    font-size: 25px !important;
+    vertical-align: middle;
+    margin: 25px;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.icon-container * {
+    width: 50%;
+    text-align: left;
+}
+
+#footer {
+    position: relative;
+    background-color: rgb(63, 61, 61);
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+
+#footer p{
+    text-align: center;
+}
+
+/* responsive settings */
+
+@media only screen and (max-width: 1280px) {
+    .responsive-size{
+        width: 1000px !important;
+    }
+
+    .title h3 {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .responsive-size{
+        width: 900px !important;
+    }
+
+    .title h3 {
+        font-size: 50px;
+    }
+
+    .title p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .responsive-size{
+        width: 800px !important;
+    }
+
+    .badges img {
+        width: 150px;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .responsive-size{
+        width: 600px !important;
+    }
+
+    .badges img {
+        width: 150px;
+        margin-top: 15px;
+    }
+
+    #launch h3 {
+        font-size: 25px;
+    }
+
+    #launch {
+        padding: 10px;
+    }
+
+    .icon-container p{
+        font-size: 20px !important;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .responsive-size{
+        width: 450px !important;
+    }
+
+    .title h3 {
+        font-size: 25px;
+    }
+
+    .title p {
+        font-size: 15px;
+    }
+
+    #app img {
+        width: 220px;
+    }
+
+    .badges img {
+        width: 150px;
+        margin-top: 15px;
+    }
+
+    #launch-body{
+        width: 100%;
+    }
+
+    .icon-container p{
+        font-size: 15px !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    #launch{
+        width: 400px !important;
+    }
+
+
+    #launch p{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    #nav{
+        display: none;
+    }
+
+    #logo{
+        text-align: center;
+        margin: auto;
+    }
+
+    #app img {
+        width: 150px;
+    }
+
+    .banner > div{
+        margin: 0 15px;
+    }
+
+    #launch{
+        width: 300px !important;
+    }
+
+
+    #launch p{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .responsive-size{
+        width: 300px !important;
     }
 }

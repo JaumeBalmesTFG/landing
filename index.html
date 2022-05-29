@@ -13,13 +13,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/highchart.css">
 
-    <!-- Highcharts.js -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -28,43 +24,46 @@
     </div>
     <div class="presentation prep-size">
         <div id="header">
-            <div class="header-container">
+            <div class="header-container responsive-size">
                 <div id="logo">
                     <h3>K-lendar</h3>
                 </div>
                 <div id="nav">
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact Us</li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#launch">Launch</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="banner">
-            <div class="title">
+        <div class="banner responsive-size">
+            <div id="download" class="title">
                 <h3>K-lendar,<br>take control<br>of your student life</h3>
+                <p>Organise your homework, calculate your grades, check your truancies...</p>
                 <div class="badges">
-                    <img src="./img/google-play-badge.png" alt="Get It On Google Play">
-                    <img src="./img/webapp.png" alt="Access the web app">
+                    <a href=""><img src="./img/google-play-badge.png" alt="Get It On Google Play"></a>
+                    <a href=""><img src="./img/webapp.png" alt="Access the web app"></a>
                 </div>
             </div>
             <div id="app"><img src="./img/app.png" alt="app"></div>
         </div>
     </div>
 
-    <!-- title 1 -->
-    <div class="title-step">
-        <h3>The best app for students</h3>
-        <div id="chart-container">
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-              </figure>
+    <div id="launch" class="responsive-size">
+        <h3>Come and join us at our launch! 🚀</h3>
+        <div id="launch-body">
+            <div class="icon-container">
+                <p>📍 C/ Pau Claris 121 08009 Barcelona</p> 
+            </div>
+            <div class="icon-container">
+                <p>📆 30/06/2022 16:00 (CEST)</p> 
+            </div>
         </div>
     </div>
 
-    <!-- JS -->
-    <script src="./js/highchart.js"></script>
+    <div id="footer">
+        <p>Copyright © 2022 K-lendar</p>
+    </div>
 </body>
 </html>
